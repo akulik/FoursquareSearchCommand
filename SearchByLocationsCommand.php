@@ -40,6 +40,7 @@ class SearchByLocationsCommand extends ContainerAwareCommand
                 if ($location->isEnabled()) {
                     $arguments = array(
                         'command' => 'foursquare:parse',
+                        '-c' => ['4bf58dd8d48988d1f6941735', '4bf58dd8d48988d103951735'],
                         'north-east' => $location->getNorthEast(),
                         'south-west' => $location->getSouthWest(),
                         '--query' => $store,
